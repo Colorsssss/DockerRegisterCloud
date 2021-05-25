@@ -80,6 +80,20 @@ main(List<String> args) async {
       await auth.login(result.command.arguments[0], username, password);
       break;
     case "push":
+      List<FileItem> items = await repository.list();
+      bool ret = false;
+      
+      for (FileItem item in items) {
+        if (item.name == result.command.arguments[1]){
+          ret = true;
+          break;
+        }
+
+      }
+      if (ret) {
+        print("${result.command.arguments[1]} already exist!!!");
+        break;
+      }
       Translation translation = await repository.begin();
       await repository.upload(
           translation,
