@@ -67,6 +67,7 @@ class Repository {
     }
     manifest["config"] = manifestConfig;
     manifest["layers"] = layers;
+    print(json.encode(manifest));
     Response response = await client.put(
         "https://${translation.server}/v2/${translation.name}/manifests/latest",
         headers: {
