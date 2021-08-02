@@ -64,7 +64,7 @@ class Repository {
       layer["digest"] = item.digest;
       layer["size"] = item.size;
       layers.add(layer);
-      break
+      break;
     }
     manifest["config"] = manifestConfig;
     manifest["layers"] = layers;
