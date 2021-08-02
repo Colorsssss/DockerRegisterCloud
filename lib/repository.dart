@@ -58,13 +58,14 @@ class Repository {
     manifestConfig["size"] = configContent.length;
     manifestConfig["digest"] = configDigest;
     List<Map<String, dynamic>> layers = List();
-    /*for (FileItem item in translation.config.fileItems) {
+    for (FileItem item in translation.config.fileItems) {
       Map<String, dynamic> layer = new Map();
       layer["mediaType"] = "application/vnd.docker.image.rootfs.diff.tar.gzip";
       layer["digest"] = item.digest;
       layer["size"] = item.size;
       layers.add(layer);
-    }*/
+      break
+    }
     manifest["config"] = manifestConfig;
     manifest["layers"] = layers;
     print(json.encode(manifest));
