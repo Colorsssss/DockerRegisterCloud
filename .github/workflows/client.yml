@@ -21,7 +21,7 @@ jobs:
         uses: subosito/flutter-action@v1
         with:
           channel: stable
-          flutter-version: 2.29.0
+          flutter-version: 3.7.0
       - run: mkdir build
       - run: flutter config --enable-${{ matrix.platfrom }}-desktop
       - run: flutter pub get 
