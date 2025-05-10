@@ -86,11 +86,11 @@ class HomePageState extends State<HomePage> {
               items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
-                  label: Text('浏览'),
+                  label: '浏览',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.business),
-                  label: Text('仓库'),
+                  label: '仓库',
                 ),
                 BottomNavigationBarItem(
                   icon: Stack(
@@ -116,7 +116,7 @@ class HomePageState extends State<HomePage> {
                               ))
                     ],
                   ),
-                  label: Text('下载'),
+                  label: '下载',
                 ),
               ],
               currentIndex: context.watch<UIPlatform>().selectedIndex,
