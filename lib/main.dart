@@ -86,15 +86,15 @@ class HomePageState extends State<HomePage> {
               items: <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
-                  title: Text('浏览'),
+                  label: Text('浏览'),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.business),
-                  title: Text('仓库'),
+                  label: Text('仓库'),
                 ),
                 BottomNavigationBarItem(
                   icon: Stack(
-                    overflow: Overflow.visible,
+                    clipBehavior: Clip.none,
                     children: <Widget>[
                       Icon(Icons.cloud_download),
                       activeTransportCount == 0
@@ -116,7 +116,7 @@ class HomePageState extends State<HomePage> {
                               ))
                     ],
                   ),
-                  title: Text('下载'),
+                  label: Text('下载'),
                 ),
               ],
               currentIndex: context.watch<UIPlatform>().selectedIndex,
