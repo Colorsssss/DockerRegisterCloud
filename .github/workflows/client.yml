@@ -25,6 +25,7 @@ jobs:
       - run: mkdir build
       - run: flutter config --enable-${{ matrix.platfrom }}-desktop
       - run: flutter pub get 
+      - run: flutter pub upgrade
       - run: dart compile exe bin/drc.dart -v -o build/${{ matrix.output-name }} 
       - run: flutter build ${{ matrix.platfrom }}
       - name: Upload Command Tools
