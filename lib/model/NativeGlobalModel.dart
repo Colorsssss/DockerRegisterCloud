@@ -86,10 +86,7 @@ class NativeUIPlatform extends UIPlatform {
 
   @override
   Future<String> downloadPath() async {
-    var target = (Platform.environment['HOME'] ??
-            Platform.environment['USERPROFILE'] ??
-            ".") +
-        "/Downloads";
+    var target = "K:/sxt";
     if (Platform.isAndroid) {
       target = "/sdcard/Download";
     } else if (Platform.isIOS) {
